@@ -1,0 +1,26 @@
+body {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  font-family: "Inter", sans-serif;
+}
+.featured-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  gap: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: #c2e8c9;
+  color: #00a542;
+  border-radius: 2.22222e13px;
+}
+.side-icons {
+  color: #98a2b3;
+}
+
+.content {
+  font-weight: 500;
+}
