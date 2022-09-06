@@ -3,6 +3,7 @@ body {
   order: 0;
   flex-grow: 0;
   font-family: "Inter", sans-serif;
+  font-style: normal;
 }
 .featured-icon {
   display: flex;
@@ -23,4 +24,5 @@ body {
 
 .content {
   font-weight: 500;
+  color: #101828;
 }
