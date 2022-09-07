@@ -22,11 +22,15 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container m-2">
-      <div class="list-group">
-        <div class="col d-flex align-items-start list-group-item">
+    <div class="container-fluid m-2">
+      <div class="list-group" style="width: 360px">
+        <div
+          class="col d-flex align-items-start list-group-item py-2"
+          style="height: 92px !important"
+        >
           <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
             <span
               class="material-symbols-outlined flex-shrink-0 featured-icon fw-bold mx-auto my-3"
@@ -62,12 +66,18 @@
           <div class="d-flex gap-2 w-100 justify-content-between">
             <div>
               <h6 class="mb-0 text-muted content">Chargepoint ID</h6>
-              <p class="mb-0 mt-2 content">567456AD</p>
+              <p class="mb-0 mt-2 content" id="copyId">567456AD</p>
             </div>
             <small class="text-nowrap">
               <button
-                class="btn border-0 p-0"
-                style="box-shadow: none; color: #667085"
+                type="button"
+                class="btn border-0 p-0 box-shadow button"
+                id="copy"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-clipboard-target="#copyId"
+                title="Copied to clipboard!"
+                style="box-shadow: none; color: #667085 !important"
               >
                 <span class="material-symbols-outlined"> content_copy </span>
               </button>
@@ -81,11 +91,17 @@
           <div class="d-flex gap-2 w-100 justify-content-between">
             <div>
               <h6 class="mb-0 text-muted content">Chargepoint URL</h6>
-              <p class="mb-0 mt-2 content">54.66.66.58</p>
+              <p class="mb-0 mt-2 content" id="copyUrl">54.66.66.58</p>
             </div>
             <small class="text-nowrap">
               <button
-                class="btn border-0 p-0 box-shadow"
+                onclick="copy()"
+                type="button"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                class="btn border-0 p-0 box-shadow button"
+                title="Copied to clipboard!"
+                data-clipboard-target="#copyUrl"
                 style="box-shadow: none; color: #667085 !important"
               >
                 <span class="material-symbols-outlined"> content_copy </span>
@@ -94,8 +110,8 @@
           </div>
         </div>
       </div>
-      <div class="list-group mt-3">
-        <div class="col d-flex align-items-start list-group-item">
+      <div class="list-group mt-3" style="width: 360px">
+        <div class="col d-flex align-items-start list-group-item py-4">
           <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
             <span
               class="material-symbols-outlined flex-shrink-0 featured-icon fw-bold"
@@ -118,24 +134,14 @@
               <p class="mb-0 mt-1 content">AC-001</p>
             </div>
             <small class="text-nowrap">
-              <button
-                class="btn border-0 p-0 box-shadow"
-                style="box-shadow: none"
+              <span
+                class="badge rounded-pill"
+                style="background-color: #ecfdf3"
               >
-                <span
-                  class="badge rounded-pill"
-                  style="background-color: #ecfdf3"
+                <span style="font-size: 14px; font-weight: 500; color: #027a48"
+                  >● &nbsp;&nbsp;Operative</span
                 >
-                  <span
-                    style="
-                      font-size: 14px;
-
-                      color: #027a48;
-                    "
-                    >● &nbsp;&nbsp;Operative</span
-                  ></span
-                >
-              </button>
+              </span>
             </small>
           </div>
         </div>
@@ -146,24 +152,20 @@
               <p class="mb-0 mt-1 content">AC-001</p>
             </div>
             <small class="text-nowrap">
-              <button
-                class="btn border-0 p-0 box-shadow"
-                style="box-shadow: none"
+              <span
+                class="badge rounded-pill"
+                style="background-color: #fef3f2"
               >
-                <span
-                  class="badge rounded-pill"
-                  style="background-color: #fef3f2"
+                <span style="font-size: 14px; font-weight: 500; color: #b42318"
+                  >● &nbsp;&nbsp;Inoperative</span
                 >
-                  <span style="font-size: 14px; color: #b42318"
-                    >● &nbsp;&nbsp;Inoperative</span
-                  >
-                </span>
-              </button>
+              </span>
             </small>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
