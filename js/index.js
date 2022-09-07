@@ -1,12 +1,15 @@
-var tooltipTriggerList = [].slice.call(
+let tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
 );
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
 
-function copy() {
-  var copytext = document.getElementById("copyUrl");
-  copytext.select();
-  $(".button").attr("title", "Copied!").tooltip("show");
+function copyURL() {
+  let copytext = document.getElementById("copyUrl");
+  navigator.clipboard.writeText(copytext.innerHTML);
+}
+function copyID() {
+  let copytext = document.getElementById("copyId");
+  navigator.clipboard.writeText(copytext.innerHTML);
 }
