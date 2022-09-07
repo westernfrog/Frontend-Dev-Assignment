@@ -10,7 +10,7 @@ body {
 }
 @media (max-width: 576px) {
   #main {
-    margin: 5px 0;
+    margin: 20px;
   }
 }
 #containers {
