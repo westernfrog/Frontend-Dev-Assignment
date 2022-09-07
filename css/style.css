@@ -26,3 +26,11 @@ body {
   font-weight: 500;
   color: #101828;
 }
+.main {
+  margin: 114.5px 540px 114.5px 540px !important;
+}
+@media (max-width: 576px) {
+  .main {
+    margin: 5px 0 !important;
+  }
+}
