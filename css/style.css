@@ -5,6 +5,18 @@ body {
   font-family: "Inter", sans-serif !important;
   font-style: normal;
 }
+#main {
+  margin: 114.5px 540px 114.5px 540px;
+}
+@media (max-width: 576px) {
+  #main {
+    margin: 5px 0;
+  }
+}
+#containers {
+  width: 360px;
+  border-radius: 12px;
+}
 .featured-icon {
   display: flex;
   flex-direction: row;
@@ -21,30 +33,17 @@ body {
 .side-icons {
   color: #98a2b3;
 }
-
-.content {
-  font-weight: 500;
-  color: #101828;
-}
-
-#main {
-  margin: 114.5px 540px 114.5px 540px;
-}
-@media (max-width: 576px) {
-  #main {
-    margin: 5px 0;
-  }
-}
-#copy {
-  box-shadow: none;
-  color: #667085;
-}
 #badge,
 .frame {
   font-size: 14px;
   font-weight: 500;
 }
-#containers {
-  width: 360px;
-  border-radius: 12px;
+.content {
+  font-weight: 500;
+  color: #101828;
+}
+
+#copy {
+  box-shadow: none;
+  color: #667085;
 }
